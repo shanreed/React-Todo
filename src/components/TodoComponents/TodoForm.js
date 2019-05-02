@@ -2,17 +2,19 @@ import React from 'react';
 
 const TodoForm = props => {
     return (
-      <form onSumbit = {props.addTodo}>
+      <form>
         <input
-          placeholder = "Task"
-          onChange = {props.changeHandler}
+          onChange={props.handleTodoChange}
+          type="text"
+          name="todo"
+          value={props.value}
+          placeholder="...todo"
         />
-  
-        <button type = "submit">Add Todo</button>
-        <button type = "submit">Clear Completed</button>
+        <button onClick={props.handleAddTodo}>Add Todo</button>
+        <button onClick={props.handleClearTodos}>Clear Completed</button>
       </form>
     );
-  };
-  
-  export default TodoForm;
+   };
+   
+   export default TodoForm;
   

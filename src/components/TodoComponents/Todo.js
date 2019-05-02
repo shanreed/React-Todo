@@ -1,14 +1,20 @@
 import React from 'react';
-import TodoList from './TodoList.js';
+
 
 
 
 const Todo = props => {
+    console.log(props)
+  
     return (
-        <div className = 'to-do'>
-            <p>{props.todoArray}</p>
-        </div>
-
+        <div
+        //when the item is clicked draw a line through text
+     style={props.todo.completed ? { 
+         textDecoration: 'line-through' } : null}
+     onClick={() => props.handleToggleComplete(props.todo.id)}
+   >
+   {props.todo.task}
+   </div>
     )
 }
 

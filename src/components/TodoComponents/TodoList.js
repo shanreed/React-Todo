@@ -4,21 +4,19 @@ import React from 'react';
 import Todo from './Todo.js';
 
 
-const todoArray = ["Make doctor's appointment", "Visit kids schools", "Make Bank Deposit", "Buy groceries",
- "Complete class project"]
-
-const TodoList = () => {
-    return (
-        <div>
-      <h1>Todo List:</h1>
-      <div className="todo-list">
-        {todoArray.map(item => (
-          <Todo todoArray = {item} />
-        ))}
-      </div>
+const TodoList = props => {
+  return (
+    <div>
+      {props.todos.map(todo => (
+        <Todo
+          handleToggleComplete={props.handleToggleComplete}
+          key={todo.id}
+          todo={todo}
+        />
+      ))}
     </div>
-    )
-}
+  );
+ };
 
 
 
