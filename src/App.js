@@ -62,7 +62,8 @@ clearCompletedTodos = e => {
 
 render() {
   return (
-    <div>
+    <div className = 'todo'>
+      <h1>TODO LIST</h1>
       <TodoList
         handleToggleComplete={this.toggleTodoComplete}
         todos={this.state.todos}
