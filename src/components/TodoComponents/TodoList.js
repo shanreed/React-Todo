@@ -3,6 +3,7 @@
 import React from 'react';
 
 import Todo from './Todo';
+import TodoForm from './TodoForm';
 
 function TodoList(props) {
 
@@ -13,6 +14,8 @@ function TodoList(props) {
           todo={todo}
         />
       ))}
+
+      <TodoForm />
         </div>
     )
 }
